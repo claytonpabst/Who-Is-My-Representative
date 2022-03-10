@@ -13,7 +13,6 @@ function Search() {
     const selectedStateOption = selectedState || listState.selectedState;
     
     const res = await axios.get(`/${catagoryOption}/${selectedStateOption}`);
-    console.log(res);
 
     updateList({ type: `SET_${catagoryOption.toUpperCase()}`, value: res.data.results });
   } 

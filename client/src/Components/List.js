@@ -7,8 +7,6 @@ import './List.css';
 function List() {
   const { listState, updateList } = useContext(listContext);
 
-  console.log(listState);
-
   const peopleToDisplay = listState[listState.catagory];
 
   function openInfoModal(person) {
@@ -29,7 +27,6 @@ function List() {
   return (
     <>
       {listState.infoModalOpen && <InfoModal/>}
-      {/* {<InfoModal/>} */}
       <div className="list">
         <div className="list-title-wrapper" >
           <h3>List</h3>
