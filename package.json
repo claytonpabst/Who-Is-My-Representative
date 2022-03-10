@@ -1,6 +1,6 @@
 {
   "name": "find-rep-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Super simple wrapper around the api at whosimyrepresentative.com/api",
   "main": "index.js",
   "scripts": {
