@@ -4,7 +4,9 @@ const initialState = {
   senators: [],
   representatives: [],
   selectedState: 'UT',
-  catagory: 'senators'
+  catagory: 'senators',
+  selectedPerson: {},
+  infoModalOpen: false
 };
 
 const reducer = (state, action) => {
@@ -35,6 +37,22 @@ const reducer = (state, action) => {
         ...state,
         catagory: action.value,
       };
+    }
+
+    case "OPEN_INFO_MODAL": {
+      return {
+        ...state,
+        selectedPerson: action.value,
+        infoModalOpen: true
+      }
+    }
+
+    case "CLOSE_INFO_MODAL": {
+      return {
+        ...state,
+        selectedPerson: {},
+        infoModalOpen: false
+      }
     }
 
     default:
