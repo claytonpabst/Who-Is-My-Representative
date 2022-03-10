@@ -3,7 +3,7 @@ import './Header.css';
 function Header() {
   return (
     <div className="header">
-      <h1>Who's My Represen</h1>
+      <h1>Who's My Representative?</h1>
     </div>
   );
 }

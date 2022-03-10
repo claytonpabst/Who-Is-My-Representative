@@ -1,0 +1,21 @@
+.list {
+  padding: 20px;
+}
+
+.list-title-wrapper {
+  /* background: red; */
+  width: 100%;
+  padding-left: 150px;
+  display: flex;
+}
+
+h3 {
+  /* background: blue; */
+  font-size: 25px;
+  padding-left: 10px;
+  /* float: left; */
+}
+
+h3::first-letter {
+  text-transform:capitalize;
+}

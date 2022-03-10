@@ -4,7 +4,7 @@ const initialState = {
   senators: [],
   representatives: [],
   selectedState: 'UT',
-  catagory: 'senator'
+  catagory: 'senators'
 };
 
 const reducer = (state, action) => {
@@ -16,35 +16,27 @@ const reducer = (state, action) => {
       };
     }
 
-    case "UPDATE_SEARCH_STATE": {
+    case "SET_REPRESENTATIVES": {
       return {
         ...state,
-        userSearch: action.value,
+        representatives: action.value,
       };
     }
 
-    case "FILTER_USERS": {
-      let filteredUsers = state.usersData;
-
-      //Checking for both names and tags then returning new filtered array
-      if (state.filterType === "All") {
-        filteredUsers = state.usersData.filter((user) => {
-          let tags = "";
-          if (user.tags) {
-            tags = user.tags.toString();
-          }
-          return (
-            user.name.first
-              .toLowerCase()
-              .includes(state.userSearch.toLowerCase()) ||
-            user.name.last
-              .toLowerCase()
-              .includes(state.userSearch.toLowerCase()) ||
-            tags.toLowerCase().includes(state.userSearch.toLowerCase())
-          );
-        });
-      }
+    case "SET_SELECTED_STATE": {
+      return {
+        ...state,
+        selectedState: action.value,
+      };
     }
+
+    case "SET_CATAGORY": {
+      return {
+        ...state,
+        catagory: action.value,
+      };
+    }
+
     default:
       return state;
   }

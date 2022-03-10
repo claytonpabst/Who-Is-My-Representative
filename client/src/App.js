@@ -13,10 +13,12 @@ function App() {
   // } 
 
   return (
-    <div className="App">
-      <Header/>
-      <Search/>
-      <List/>
+    <div className='App-Wrapper'>
+      <div className="App">
+        <Header/>
+        <Search/>
+        <List/>
+      </div>
     </div>
   );
 }

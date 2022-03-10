@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import {ListStore} from './Store/ListStore';
 import './index.css';
+import './reset.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

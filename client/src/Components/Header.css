@@ -1,8 +1,9 @@
 .header {
   color: #06A6ED;
-  background-color: pink;
-  font-size: 18px;
+  /* background-color: pink; */
+  font-size: 25px;
   font-weight: bolder;
-  height: 30px;
+  padding: 20px;
   width: auto;
+  margin: auto;
 }
